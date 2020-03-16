@@ -1,0 +1,21 @@
+// import
+#include<cstdio>
+#include<iostream>
+using namespace std;
+int main(){
+    // begin the open file here
+    FILE *f = freopen("<your file name.type>","<mode>", <stdmode>);
+    // <your file name.type> your file name and type. e.g. aFile.txt
+    // <mode> r for reading, w for writing
+    // <stdmode> if mode is r, then stdmode is stdin. if mode is w, the stdmode is stdout.
+    // for the *f, we name the file that we open to f so we don't have to type our file name a million times.
+    // to read and write, we MUST use cstdio functions.
+    int a; // get ready to store what's in the file into this variable
+    scanf("%d",&a); // if the file contains a number, then a will store the number. if the file contains "12vs", then a will contain 12.
+    //                 However, if the file contains "jhj454", then a will store nothing. 
+    // "%d": this means an integer. &a means store to variable a. for "%d", there are other modes available. "%c" is read a character. "%s"
+    // means to read a string. however "%lf" (means long float) does not work. 
+    // now if we were to print something into a file, then the first line "FILE *f = freopen(...)" will have to be: (file name does not matter)
+    FILE *g = freopen("<your file name.type>","w",stdout); // this line instead for printing things into a file. the *g does not really matter.
+    // now you can do whatever you want with your file!
+}
